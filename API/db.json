@@ -1,0 +1,58 @@
+{
+    "selecoes":[
+        {
+            "id": 1,
+            "nome": "Brasil",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png",
+            "grupo": "G",
+            "conquistas":[
+                {
+                    "ano": 1958,
+                    "pais": "Suécia"
+                },
+                {
+                    "ano": 1962,
+                    "pais": "Chile"
+                },
+                {
+                    "ano": 1970,
+                    "pais": "México"
+                },
+                {
+                    "ano": 1994,
+                    "pais": "Estados Unidos"
+                },
+                {
+                    "ano": 2002,
+                    "pais": "Coreia do Sul/Japão"
+                }
+            ], 
+            "jogadores": [
+                {
+                    "id":1,
+                    "nome": "Neymar",
+                    "camisa": 10,
+                    "posicao": "Atacante",
+                    "titular": true,
+                    "gols": 79
+                },
+                {
+                    "id":2,
+                    "nome": "Alisson",
+                    "camisa": 1,
+                    "posicao": "Goleiro",
+                    "titular": true,
+                    "gols": 0
+                },
+                {
+                    "id":3,
+                    "nome": "Casemiro",
+                    "camisa": 5,
+                    "posicao": "Volante",
+                    "titular": true,
+                    "gols": 12
+                }
+            ]
+        }
+    ]
+}
