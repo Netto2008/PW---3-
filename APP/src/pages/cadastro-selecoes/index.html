@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Seleções</title>
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Cadastro de Seleções</h1>
+            
+            <form id="form-cadastro" class="form-cadastro">
+                <div class="form-group">
+                    <label for="nome">Nome da Seleção:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Ex: Brasil">
+                </div>
+
+                <div class="form-group">
+                    <label for="grupo">Grupo:</label>
+                    <input type="text" id="grupo" name="grupo" required placeholder="Ex: A, B, C, D...">
+                </div>
+
+                <div class="form-group">
+                    <label for="logo">URL da Logo:</label>
+                    <input type="url" id="logo" name="logo" required placeholder="https://exemplo.com/logo.png">
+                </div>
+
+                <button type="submit" class="btn-submit">Cadastrar Seleção</button>
+            </form>
+
+            <div id="mensagem" class="mensagem"></div>
+
+            <div class="btns-navegacao">
+                <a href="../selecoes/index.html" class="btn-voltar">Voltar para Seleções</a>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

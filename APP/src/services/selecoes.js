@@ -1,24 +1,35 @@
-import { routes } from "../config/routes.js";
-import { GET, POST, DELETE, PUT, PATCH } from "./http.js";
+import db from "../../../API/db.json" assert { type: "json" };
 
 const getSelecoes = async () => {
-    return await GET(routes.selecoes);
+    return db.selecoes;
 };
 
 const postSelecao = async (data) => {
-    return await POST(routes.selecoes, data);
+    db.selecoes.push(data);
+    return data;
 };
 
 const putSelecao = async (id, data) => {
-    return await PUT(`${routes.selecoes}/${id}`, data);
+    const index = db.selecoes.findIndex(s => s.id == id);
+    if (index !== -1) {
+        db.selecoes[index] = data;
+    }
+    return data;
 };
 
 const patchSelecao = async (id, data) => {
-    return await PATCH(`${routes.selecoes}/${id}`, data);
+    const selecao = db.selecoes.find(s => s.id == id);
+    if (selecao) {
+        Object.assign(selecao, data);
+    }
+    return selecao;
 };
 
 const deleteSelecao = async (id) => {
-    return await DELETE(`${routes.selecoes}/${id}`);
+    const index = db.selecoes.findIndex(s => s.id == id);
+    if (index !== -1) {
+        db.selecoes.splice(index, 1);
+    }
 };
 
 export { getSelecoes, postSelecao, putSelecao, patchSelecao, deleteSelecao };

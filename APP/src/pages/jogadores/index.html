@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogadores</title>
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <a href="../selecoes/index.html" class="btn-voltar">← Voltar</a>
+            <h1 id="selecao-nome">Seleção</h1>
+        </div>
+
+        <div class="container">
+            <div class="jogadores-section">
+                <div class="jogadores-header">
+                    <h2>Jogadores</h2>
+                    <a id="btn-adicionar" href="../cadastro-jogador/index.html" class="btn-adicionar">+ Adicionar Jogador</a>
+                </div>
+                <div id="loading-container" class="loading-container" style="display: none;">
+                    <div class="loader"></div>
+                    <span>Carregando jogadores...</span>
+                </div>
+                <div id="jogadores-container" class="jogadores-lista">
+                    <!-- Jogadores serão inseridos aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+    <script>
+        // Atualizar link de adicionar jogador
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        if (id) {
+            document.getElementById('btn-adicionar').href = `../cadastro-jogador/index.html?id=${id}`;
+        }
+    </script>
+</body>
+</html>

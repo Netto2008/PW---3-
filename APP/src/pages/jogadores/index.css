@@ -1,0 +1,227 @@
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    position: relative;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-voltar {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color var(--transition);
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-voltar:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    min-height: calc(100vh - 80px);
+}
+
+.jogadores-section h2 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5em;
+}
+
+.jogadores-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-md);
+}
+
+.jogadores-header h2 {
+    margin: 0;
+}
+
+.btn-adicionar {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: var(--success-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: background-color var(--transition), transform 0.2s ease;
+}
+
+.btn-adicionar:hover {
+    background-color: var(--success-dark);
+    transform: translateY(-2px);
+}
+
+.jogadores-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.jogador-item {
+    background-color: white;
+    border-left: 4px solid var(--primary-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    transition: box-shadow var(--transition), transform var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+}
+
+.jogador-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.jogador-camisa {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-right: var(--spacing-md);
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.jogador-info {
+    flex-grow: 1;
+}
+
+.jogador-nome {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.jogador-detalhes {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.jogador-detalhes span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.jogador-acoes {
+    display: flex;
+    gap: 8px;
+    margin-left: var(--spacing-md);
+}
+
+.btn-editar,
+.btn-deletar {
+    padding: 8px 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: background-color var(--transition), transform 0.2s ease;
+}
+
+.btn-editar {
+    background-color: var(--warning-color);
+    color: var(--text-primary);
+}
+
+.btn-editar:hover {
+    background-color: var(--warning-dark);
+}
+
+.btn-deletar {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-deletar:hover {
+    background-color: var(--danger-dark);
+}
+
+.btn-editar:active,
+.btn-deletar:active {
+    transform: scale(0.98);
+}
+
+.mensagem-vazia {
+    text-align: center;
+    color: var(--text-light);
+    padding: var(--spacing-2xl);
+    font-size: 1.1em;
+}
+
+.mensagem-vazia a {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    padding: 10px 16px;
+    background-color: var(--success-color);
+    color: white;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mensagem-vazia a:hover {
+    background-color: var(--success-dark);
+}
+
+@media (max-width: 768px) {
+    .jogador-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+    
+    .jogador-acoes {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .jogador-acoes button {
+        flex: 1;
+    }
+    
+    .jogadores-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-adicionar {
+        text-align: center;
+    }
+}
