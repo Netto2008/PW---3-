@@ -24,42 +24,45 @@ form.addEventListener('submit', async (e) => {
         
         // Criar novo objeto de seleção
         const novaSelecao = {
-            id: (maxId + 1).toString(),
             nome,
             grupo,
             logo,
             conquistas: [],
             jogadores: []
         };
+        // id removido — JSON Server cria automaticamente
         
         // Salvar nova seleção
-        await postSelecao(novaSelecao);
+        const result = await postSelecao(novaSelecao);
+        if(result){
+            // Mostrar sucesso
+            alert(`Seleção "${nome}" cadastrada com sucesso!`, 'sucesso');
+            
+            // Limpar formulário
+            form.reset();
+
+        }
         
-        // Mostrar sucesso
-        mostraMensagem(`Seleção "${nome}" cadastrada com sucesso!`, 'sucesso');
         
-        // Limpar formulário
-        form.reset();
-        
-        // Redirecionar após 2 segundos
-        setTimeout(() => {
-            window.location.href = '../selecoes/index.html';
-        }, 2000);
+        // // Redirecionar após 2 segundos
+        // setTimeout(() => {
+        //     window.location.href = '../selecoes/index.html';
+        // }, 2000);
         
     } catch (error) {
         console.error('Erro ao cadastrar seleção:', error);
-        mostraMensagem('Erro ao cadastrar seleção. Tente novamente!', 'erro');
+        alert('Erro ao cadastrar seleção. Tente novamente!', 'erro');
     }
 });
 
-function mostraMensagem(texto, tipo) {
-    mensagemDiv.textContent = texto;
-    mensagemDiv.className = `mensagem show ${tipo}`;
+// function mostraMensagem(texto, tipo) {
+//     mensagemDiv.textContent = texto;
+//     mensagemDiv.className = `mensagem show ${tipo}`;
     
-    // Remover mensagem após 5 segundos se for sucesso
-    if (tipo === 'sucesso') {
-        setTimeout(() => {
-            mensagemDiv.className = 'mensagem';
-        }, 5000);
-    }
-}
+//     // Remover mensagem após 5 segundos se for sucesso
+//     if (tipo === 'sucesso') {
+//         setTimeout(() => {
+//             mensagemDiv.className = 'mensagem';
+//         }, 5000);
+//     }
+//}

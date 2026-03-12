@@ -1,35 +1,41 @@
-import db from "../../../API/db.json" assert { type: "json" };
+const BASE_URL = 'https://sturdy-fortnight-6956gj4gxjg7fw7w-3000.app.github.dev';
 
 const getSelecoes = async () => {
-    return db.selecoes;
+    const response = await fetch(`${BASE_URL}/selecoes`);
+    return response.json();
 };
 
 const postSelecao = async (data) => {
-    db.selecoes.push(data);
-    return data;
+    const response = await fetch(`${BASE_URL}/selecoes`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+    return response.json();
 };
 
 const putSelecao = async (id, data) => {
-    const index = db.selecoes.findIndex(s => s.id == id);
-    if (index !== -1) {
-        db.selecoes[index] = data;
-    }
-    return data;
+    const response = await fetch(`${BASE_URL}/selecoes/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+    return response.json();
 };
 
 const patchSelecao = async (id, data) => {
-    const selecao = db.selecoes.find(s => s.id == id);
-    if (selecao) {
-        Object.assign(selecao, data);
-    }
-    return selecao;
+    const response = await fetch(`${BASE_URL}/selecoes/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+    return response.json();
 };
 
 const deleteSelecao = async (id) => {
-    const index = db.selecoes.findIndex(s => s.id == id);
-    if (index !== -1) {
-        db.selecoes.splice(index, 1);
-    }
+    await fetch(`${BASE_URL}/selecoes/${id}`, {
+        method: 'DELETE'
+    });
 };
 
 export { getSelecoes, postSelecao, putSelecao, patchSelecao, deleteSelecao };

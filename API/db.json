@@ -1,58 +1,92 @@
 {
-    "selecoes":[
+  "selecoes": [
+    {
+      "id": "1",
+      "nome": "Brasil",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png",
+      "grupo": "G",
+      "conquistas": [
         {
-            "id": 1,
-            "nome": "Brasil",
-            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png",
-            "grupo": "G",
-            "conquistas":[
-                {
-                    "ano": 1958,
-                    "pais": "Suécia"
-                },
-                {
-                    "ano": 1962,
-                    "pais": "Chile"
-                },
-                {
-                    "ano": 1970,
-                    "pais": "México"
-                },
-                {
-                    "ano": 1994,
-                    "pais": "Estados Unidos"
-                },
-                {
-                    "ano": 2002,
-                    "pais": "Coreia do Sul/Japão"
-                }
-            ], 
-            "jogadores": [
-                {
-                    "id":1,
-                    "nome": "Neymar",
-                    "camisa": 10,
-                    "posicao": "Atacante",
-                    "titular": true,
-                    "gols": 79
-                },
-                {
-                    "id":2,
-                    "nome": "Alisson",
-                    "camisa": 1,
-                    "posicao": "Goleiro",
-                    "titular": true,
-                    "gols": 0
-                },
-                {
-                    "id":3,
-                    "nome": "Casemiro",
-                    "camisa": 5,
-                    "posicao": "Volante",
-                    "titular": true,
-                    "gols": 12
-                }
-            ]
+          "ano": 1958,
+          "pais": "Suécia"
+        },
+        {
+          "ano": 1962,
+          "pais": "Chile"
+        },
+        {
+          "ano": 1970,
+          "pais": "México"
+        },
+        {
+          "ano": 1994,
+          "pais": "Estados Unidos"
+        },
+        {
+          "ano": 2002,
+          "pais": "Coreia do Sul/Japão"
         }
-    ]
+      ],
+      "jogadores": [
+        {
+          "id": 1,
+          "nome": "Neymar",
+          "camisa": 10,
+          "posicao": "Atacante",
+          "titular": true,
+          "gols": 79
+        },
+        {
+          "id": 2,
+          "nome": "Alisson",
+          "camisa": 1,
+          "posicao": "Goleiro",
+          "titular": true,
+          "gols": 0
+        },
+        {
+          "id": 8737,
+          "nome": "Casemiro",
+          "camisa": 13,
+          "posicao": "Zagueiro",
+          "gols": 12,
+          "titular": false
+        }
+      ]
+    },
+    {
+      "id": "8736",
+      "nome": "Suiça",
+      "grupo": "c",
+      "logo": "https://images.terra.com/2015/04/24/logoselecao-suica.png",
+      "conquistas": [],
+      "jogadores": [
+        {
+          "id": 1,
+          "nome": "Neymaro",
+          "camisa": 10,
+          "posicao": "Zagueiro",
+          "gols": 5,
+          "titular": true
+        }
+      ]
+    },
+    {
+      "id": "8a1a",
+      "nome": "Suiça",
+      "grupo": "d",
+      "logo": "https://images.terra.com/2015/04/24/logoselecao-suica.png",
+      "conquistas": [],
+      "jogadores": []
+    },
+    {
+      "id": "6d09",
+      "nome": "Neymaro",
+      "grupo": "f",
+      "logo": "https://logodownload.org/wp-content/uploads/2018/04/costa-rica-national-football-team-logo.png",
+      "conquistas": [],
+      "jogadores": []
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
