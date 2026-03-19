@@ -86,6 +86,39 @@
       "logo": "https://logodownload.org/wp-content/uploads/2018/04/costa-rica-national-football-team-logo.png",
       "conquistas": [],
       "jogadores": []
+    },
+    {
+      "id": "ef31",
+      "nome": "Suiça",
+      "grupo": "a",
+      "logo": "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
+      "conquistas": [],
+      "jogadores": []
+    },
+    {
+      "id": "f192",
+      "nome": "Suiça",
+      "grupo": "a",
+      "logo": "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
+      "conquistas": [],
+      "jogadores": [
+        {
+          "id": 1,
+          "nome": "Casemiro",
+          "camisa": 4,
+          "posicao": "Volante",
+          "gols": 67,
+          "titular": true
+        }
+      ]
+    },
+    {
+      "id": "7f7f",
+      "nome": "ali laranjini",
+      "grupo": "R",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/250px-Flag_of_Algeria.svg.png",
+      "conquistas": [],
+      "jogadores": []
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
